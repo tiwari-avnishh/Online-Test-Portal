@@ -1,0 +1,62 @@
+<html th:replace="admin/adminbase::layout(~{::section})">
+
+<head>
+</head>
+
+<body>
+	<section>
+		<div class="container-fluid">
+			<div class="row shadow">
+				<div class="col-sm-12 py-5">
+					<h1 class="text-center" style="font-weight: bolder;">Admin Dashboard</h1>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-4 ">
+							<div class="card text-center py-4 px-2 shadow">
+								<h1 class="p-2">Registered Students</h1>
+								<hr/>
+								<h5 th:text="${stdcount}" style="color: orangered;"></h5>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="card text-center py-4 px-2 shadow">
+								<h1 class="p-2">Enquiries</h1>
+								<hr/>
+								<h5 th:text="${enqcount}" style="color: orangered;"></h5>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="card text-center py-4 px-2 shadow">
+								<h1 class="p-2">Total Question</h1>
+								<hr/>
+								<h5 th:text="${qcount}" style="color: orangered;"></h5>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-sm-6 ">
+							<div class="card text-center py-4 px-2 shadow">
+								<h1 class="p-2">Complaints</h1>
+								<hr/>
+								<h5 th:text="${comcount}" style="color: orangered;"></h5>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="card text-center py-4 px-2 shadow">
+								<h1 class="p-2">Feedbacks</h1>
+								<hr/>
+								<h5 th:text="${fedcount}" style="color: orangered;"></h5>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

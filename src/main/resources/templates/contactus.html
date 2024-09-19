@@ -1,0 +1,98 @@
+<html th:replace="base::layout(~{::section})">
+	<head>
+	</head>
+<body>
+	<section>
+		<div class="container-fluid" style="background-image: url('images/1b.jpg');height:100vh;">
+			<div class="row py-5" style="background-color:  orangered;color: white;font-weight: 700;">
+				<h2 class="text-center fw-bold">
+					Enquiry Form
+				</h2>
+				</div>
+				<div class="row  mt-4" style="justify-content: center;" th:if="${message}">
+					<div class="col-sm-6">
+						<div class="row mt-2">
+							<h4 class="dismissable" style="background-color: mediumseagreen; color: white;padding: 20px;" th:text="${message}"></h4>
+						</div>
+					</div>
+				</div>
+			<div class="row mt-5">
+				<form class="form-group p-4 mt-5" method="post" style="margin: auto; width: 45%; border:2px solid black;    background: linear-gradient(#f8781f 60%, rgb(255, 213, 0) );color: white; border-radius: 5px;box-shadow:5px 5px 20px black;font-weight: bolder;" th:object="${dto}">
+					
+							<div class="row d-flex ">
+								<div class="col-sm-4" style="border-bottom: 1px solid white;">
+									<label class="mt-2">Enter Name</label>
+								</div>
+								<div class="col-sm-8">
+									<input type="text" required class="form-control abc" style="width: 80%;									background-color: orange;
+											  padding-left: 10px; 
+											  border-radius: 10px;
+											  border: 1px solid black;
+											  box-shadow: 0px 1px 8px 1px white;
+											  color: white;" placeholder="Enter your name" th:field="${dto.name}" /> 
+								</div>
+							</div>
+							<div class=" row mt-3 d-flex">
+							<div class="col-sm-4" style="border-bottom: 1px solid white;">
+								<label class="mt-2 ">Select Gender</label>
+							</div>
+								<div class="col-sm-8">
+									<input type="radio"  required class="form-check-input fs-4" value="male"
+															th:field="${dto.gender}" /> &nbsp;<span style="margin-top: 10px">Male</span>
+									<input type="radio"  required class="form-check-input fs-4 abc" value="female"
+															th:field="${dto.gender}" /> &nbsp;<span>Female</span>
+								</div>
+							</div>
+						<div class=" row mt-3 d-flex">
+								<div class="col-sm-4"  style="border-bottom: 1px solid white;">
+									<label class="mt-2">
+										Contact No.
+									</label>
+								</div>
+								<div class="col-sm-8">
+									<input type="text" placeholder="Enter your Contact no."  style="width: 80%;									background-color: orange;
+											  padding-left: 10px; 
+											  border-radius: 10px;
+											  border: 1px solid black;
+											  box-shadow: 0px 1px 8px 1px white;
+											  color: white;" required class="form-control abc" th:field="${dto.contactno}" /> 
+								</div>
+							</div>	
+						<div class=" row mt-3 d-flex">
+								<div class="col-sm-4" style="border-bottom: 1px solid white;">
+									<label class="mt-2">Enter Email Address</label>
+								</div>
+							<div class="col-sm-8">
+								<input type="email" required class="form-control abc"  style="width: 80%;								background-color: orange;
+										  padding-left: 10px; 
+										  border-radius: 10px;
+										  border: 1px solid black;
+										  box-shadow: 0px 1px 8px 1px white;
+										  color: white;" placeholder="Enter your email" th:field="${dto.emailaddress}" />		
+							</div>
+							</div>
+							<div class=" row mt-3 d-flex">
+							<div class="col-sm-4" style="border-bottom: 1px solid white;">
+								<label class="mt-2">Enquiry Text</label>
+							</div>
+							<div class="col-sm-8">
+								<textarea required class="form-control abc"  style="width: 80%; box-shadow: 0px 1px 8px 1px white;								background-color: orange;
+										  padding-left: 10px; 
+										  border-radius: 10px;
+										  border: 1px solid black;
+										  box-shadow: 0px 1px 8px 1px white;
+										  color: white;"  placeholder="Enter your enquiry" th:field="${dto.enquirytext}"></textarea>						
+							</div>
+							</div>		
+							<div class=" row mt-3 d-flex">
+									<div class="col-sm-4"></div>
+									<div class="col-sm-8">
+										<button type="submit" class="btn" style="background-color: orangered; color: white;font-weight: 700;width: 40%; box-shadow: 0px 1px 8px 1px white;">Submit</button>
+									</div>
+								</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

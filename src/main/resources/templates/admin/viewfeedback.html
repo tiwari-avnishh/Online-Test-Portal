@@ -1,0 +1,56 @@
+ss<html th:replace="admin/adminbase::layout(~{::section})">
+
+<head>
+</head>
+
+<body>
+	<section>
+		<div class="row d-flex">
+			<div class="col-sm-12">
+				<h1 class="text-center mx-auto text-primary fw-bold">Manage Feedback</h1>
+			</div>
+
+			<div class="col-sm-12 text-center" th:if="${msg}">
+				<h4 class="dismissable" style="background-color: mediumseagreen; color: white;padding: 20px;"
+					th:text="${msg}"></h4>
+			</div>
+			<div class="col-sm-12" style="height: 90vh;width:100%;overflow:scroll">
+				<table class="table table-bordered">
+					<thead class="table-danger">
+						<tr>
+							<th>Name</th>
+							<th>Enrollment No</th>
+							<th>Contact no</th>
+							<th>Email Address</th>
+							<th>Feedback Subject</th>
+							<th>Feedback Message</th>
+							<th>Feedback Date</th>
+							<th>
+								Delete
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="f:${flist}">
+							<td th:text="${f.name}"></td>
+							<td th:text="${f.enrollmentno}"></td>
+							<td th:text="${f.contactno}"></td>
+							<td th:text="${f.emailaddress}"></td>
+							<td th:text="${f.subject}"></td>
+							<td th:text="${f.message}"></td>
+							<td th:text="${f.resdate}"></td>
+							<td>
+								<a th:href="@{viewfeedback/delete(resid=${f.resid})}">
+									<button onclick="return confirm ('Are you sure want to delete?')"
+										class="btn btn-danger">Delete</button>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

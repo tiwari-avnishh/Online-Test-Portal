@@ -1,0 +1,264 @@
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<script src="js/bootstrap.bundle.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Online test portal</title>
+	<style>
+		.fixed-btn2 {
+			position: fixed;
+			right: -50px;
+			top: 50%;
+			height: 50px;
+			font-size: 20px;
+			padding-top: 10px;
+			background-color: #ef662f;
+			border: none;
+			border-radius: 0;
+			transform: rotate(270deg);
+		}
+
+		.fixed-btn2:hover {
+			background-color: rgb(8, 97, 8);
+		}
+			
+			.dd {
+				background-color: rgb(255, 140, 0);
+				padding: 5px;
+				width: 850px;
+				color: black;
+			}
+
+			.dd1 {
+				background-color: rgb(255, 140, 0);
+				padding: 5px;
+				width: 400px;
+				margin-left: 30px;
+				color: black;
+			}
+	
+			.avnishh:hover{
+ 			 background-color: rgb(255, 187, 0);
+ 		  	 color: white;
+			}
+			.avnishh{
+ 			height: 45px;
+			 background-color: #ef662f;
+			  font-weight: bold; 
+			  color: white; 
+			  text-decoration: none;
+ 			 border-radius: 5px;
+			  padding: 13px;
+ 			 padding-left:15px;
+			  padding-right: 15px;
+			  transition:0.5sec ease;
+			   border:0px;
+			}
+			.avnishh a{
+				text-decoration:none;
+				color:white;
+			}
+
+			.abc::placeholder {
+			  color: white!important;
+			  opacity: 1!important;
+			}
+			input{
+			  background-color: orange;
+			  padding-left: 10px; 
+			  border-radius: 10px;
+			  border: 1px solid black;
+			  box-shadow: 0px 1px 8px 1px white;
+			  color: white;
+			}
+			.battan{
+			  background-color: orangered;
+			  color:white;
+			  border: 1px solid black;
+			  border-radius: 10px;
+			  padding-left: 8px;
+			  padding-right: 8px;
+			  padding: 5px;
+			  height: 43px;
+			  width: 69%!important;
+			  font-weight: 700;
+			  box-shadow: 0px 1px 8px 1px white;
+			}
+			.table{
+			    background: linear-gradient(#f8781f 60%, rgb(255, 213, 0) );
+			}
+		</style>
+</head>
+<body>
+<section style="background-color: white;">
+	<div class="container-fluid">
+		
+			<!-- section -->
+			<div class="row p-1 " style="background-color: rgba(244, 242, 242, 0.868);">
+				<div class="col-sm-3 p-0">
+					<span>
+						<i class="fa-brands fa-facebook"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+					<span>
+						<i class="fa-brands fa-twitter"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+					<span>
+						<i class="fa-brands fa-youtube"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+					<span>
+						<i class="fa-brands fa-google-plus-g"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+					<span>
+						<i class="fa-brands fa-linkedin"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+					<span>
+						<i class="fa-brands fa-instagram"
+							style="background-color:#ef662f; color:white; padding: 5px; border-radius:3px; font-size: 14px;"></i>
+					</span>
+				</div>
+				<div class="col-sm-9 text-end ">
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid sticky-top bg-light">
+			<div class="row shadow">
+			            <div class="col-sm-2">
+			                <img src="./images/logospi new.png" height="95" style="margin-left:60px;" class="w100img" alt="">
+			            </div>
+			            <div class="col-sm-8 my-auto ">
+			                <h5 class="mt-3 p-3" style="font-weight: 800; color:#ef662f; font-weight: 900; font-size:18px">
+			                    Do Your Summer Internship
+			                    under the guidance of Industry Experts from IIT Kanpur and IET Lucknow
+			                </h5>
+			            </div>
+			            <div class="col-sm-2 ">
+							<img src="./images/logospi new.png" height="95" style="margin-left:60px;" class="w100img" alt="">
+			            </div>
+			        </div>
+			<div class="row shadow" style="justify-content: center;background-color: #ef662f;">
+				<div class="col-sm-5" style="background-color: #ef662f;">
+						<nav class="navbar navbar-expand-lg" style="background-color: #ef662f;">
+													<div class="collapse navbar-collapse"  style="background-color: #ef662f;">
+														<ul class="navbar-nav mb-lg pb-2 pt-2"  style="background-color: #ef662f;">
+															  &nbsp; &nbsp;<li class="nav-item avnishh">
+																<a href="/index" >Home</a>
+															</li> &nbsp; &nbsp;
+															<li class="nav-item dropdown">
+															     <a class="nav-link dropdown-toggle text-light avnishh" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+															         <i class="fa-shake fa fa-key"></i>Login
+															     </a>
+															   <ul class="dropdown-menu px-2" aria-labelledby="navbarDropdownMenuLink"  style="box-shadow:2px 2px 10px black">
+															      <li><a class="dropdown-item avnishh" href="/studentlogin">Student Login</a></li>
+															      <li><a class="dropdown-item avnishh mt-2" href="/adminlogin">Admin Login</a></li>
+															   </ul>
+															 </li> &nbsp; &nbsp;
+															<li class="nav-item avnishh"  >
+																<a href="/registration">
+																	Registration
+																</a>
+															</li> &nbsp; &nbsp;
+															<li class="nav-item avnishh">
+																<a href="/contactus"><i class="fa-bounce fa fa-phone"></i>Contact us</a>
+															</li> &nbsp; &nbsp;
+															<li class="nav-item avnishh">
+																<a href="/aboutus">About us</a>
+															</li>
+														</ul>
+													</div>
+											</nav>
+				</div>
+			</div>
+		</div>
+		<div class="row" th:replace="${content}">
+		</div>
+
+		<section class="p-0 helpdesk" id="abcsd">
+			<div class="container pt-5">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="section-title">
+									<h3 style="color:black; text-align:left;">Address</h3>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12  pt-3" style="text-align: justify; color: black;">
+								<p>
+									Head Office: Softpro Tower <br>
+									Near New Hanuman Temple, Kapoorthala <br>
+									Aliganj, Lucknow (UP)-226006
+								</p>
+								<p>
+									Branch Office: Softpro House <br>
+									3/213, Sector J, Jankipuram <br>
+									Kursi Road, Lucknow
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="section-title">
+									<h3 style="color:black; text-align:left;">Help & Support</h3>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12  pt-3" style="text-align: justify; font-weight:500;">
+								<p>
+									If you need immediate assistance or have any further questions, feel free to call us
+									at given number below and you can also send me a mail on the given mail id.
+								</p>
+							</div>
+						</div>
+						<div class="row help-text text-dark">
+							<div class="col-sm-6 mt-3">
+								<h4 class="text-dark" style="color:black"><a
+										href="/cdn-cgi/l/email-protection#7e160c3e0d11180a0e0c1117101a171f501710"> <span
+											class="__cf_email__"
+											data-cfemail="e08892a0938f869490928f898e848981ce898e">[email&#160;protected]</span></a>
+								</h4>
+							</div>
+							<div class="col-sm-6 mt-3">
+								<h4 class="text-dark"><a href="tel:7080102006"> +91 7080102006</a></h4>
+								<h4 class="text-dark"><a href="tel:7080462022"> +91 7080462022</a></h4>
+								<h4 class="text-dark"><a href="tel:7080422022"> +91 7080422022</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 pt-5">
+						<div class="image-help text-center mx-lg-0">
+							<img src="./images/help-desk1.png" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright p-1 text-center mt-3 p-4  shadow-lg"
+				style="font-size:18px; font-weight:700; font-family:  Open Sans, sans-serif;">
+				&copy; Copyright <span>
+					2024 Designed & Developed By | Avnish Tiwari
+				</span>
+			</div>
+		</section>
+		<!-- End Footer-->
+		<a href="#" class=" btn btn-success fixed-btn2"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Our Experts</a>
+		<!--footer -->
+	</div>
+		</section>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html lang="en" th:replace="base::layout(~{::section})">
+ <head>
+ </head>
+<body>
+   <section>
+	<div class="container-fluid" style="background-image: url('images/1b.jpg');height:108vh;">
+		<div class="row py-5" style="background-color:  orangered;color: white;font-weight: 700;">
+				<h1 class="text-center fw-bold">
+					Admin Login
+				</h1>
+		</div>
+	    <div class="row mt-5 mb-5" style="justify-content: center;">
+	        <div class="col-sm-4 mb-5"style="border-radius: 10px;border: 1px solid black;box-shadow:5px 5px 20px black;   background: linear-gradient(orangered ,orange);">
+	            <form action="" class="text-center  py-4" method="post" th:object="${dto}">
+					<br>
+	                <img src="images/loginn.jpeg" alt="" width="40%" style="border: 5px solid white; border-radius: 101px; box-shadow: 2px 2px 25px 2px white;"> <br> <br>
+	                <div class="form-floating" style="display:flex;justify-content: center; margin-top: 10px;">
+	                    <i class="fa-solid fa-user fs-4" style="margin-top: 1px; box-shadow: 1px 1px 10px 1px white;color: white; border: 1px solid white; border-radius: 5px; padding: 2%;background-color: orangered;"></i> &nbsp;
+	                    <input type="text"  th:field="${dto.userid}" placeholder="Enter User ID" class="abc"
+	                    style="width: 58%;">
+	                </div>
+	                <div class="" style="display:flex;justify-content: center; margin-top: 25px;">
+	                    <i class="fa-solid fa-lock fs-4" style="margin-top: 1px;padding: 2%; box-shadow: 1px 1px 10px 1px white;color: white; border: 1px solid white; border-radius: 5px;background-color: orangered;"></i> &nbsp;
+	                     <input type="password" placeholder="Enter password" style="width: 58%;"  class="abc" th:field="${dto.password}">
+	                </div>   
+	                <button class="battan" type="submit" style="width: 71%;color: white;margin-top: 20px;">LOGIN</button>
+	                <br>
+					<div th:if="${msg}">
+						<p th:text="${msg}" style="color: greenyellow;"></p>
+					</div>
+					<br>
+	                </form>
+	                </div>
+	            </div>
+	    </div>
+   </section>
+  </body>
+</html>

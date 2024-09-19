@@ -1,0 +1,54 @@
+<html th:replace="admin/adminbase::layout(~{::section})">
+
+<head>
+</head>
+
+<body>
+	<section>
+		<div class="row">
+		<div class="col-sm-12">
+			<h1 class="text-center mx-auto text-primary fw-bold">Manage Complaint</h1>
+		</div>
+			<div class="col-sm-12 text-center" th:if="${msg}">
+				<h4 class="dismissable" style="background-color: mediumseagreen; color: white;padding: 20px;"
+					th:text="${msg}"></h4>
+			</div>
+			<div class="col-sm-12" style="height: 90vh;width:100%;overflow:scroll">
+				<table class="table table-bordered">
+					<thead class="table-danger">
+						<tr>
+							<th>Name</th>
+							<th>Enrollment No</th>
+							<th>Contact no</th>
+							<th>Email Address</th>
+							<th>Complaint Subject</th>
+							<th>Complaint Message</th>
+							<th>Complaint Date</th>
+							<th>
+								Delete
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="c:${clist}">
+							<td th:text="${c.name}"></td>
+							<td th:text="${c.enrollmentno}"></td>
+							<td th:text="${c.contactno}"></td>
+							<td th:text="${c.emailaddress}"></td>
+							<td th:text="${c.subject}"></td>
+							<td th:text="${c.message}"></td>
+							<td th:text="${c.resdate}"></td>
+							<td>
+								<a th:href="@{viewcomplaint/delete(resid=${c.resid})}">
+									<button onclick="return confirm ('Are you sure want to delete?')"
+										class="btn btn-danger">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
